@@ -1,0 +1,46 @@
+using System;
+using System.IO;
+class Program
+{
+    public static void Main()
+    {
+
+        string nome = "";
+        int idade = 0;
+        string tmovel = "";
+        
+        try
+        {
+            Console.WriteLine("Obrigado pela sua compra!");
+            Console.WriteLine("Qual o seu nome?: ");
+            nome = Console.ReadLine();
+            Console.WriteLine("Qual a sua idade?: ");
+            idade = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Qual o tipo de movel adquirido?: ");
+            tmovel = Console.ReadLine();
+            //---------------------------------------------------------
+            if (tmovel == "B" || tmovel == "b")
+            {
+                throw new Exception();
+            }
+            else
+            {
+                Console.WriteLine("Não podemos opinar sobre esse movel!");
+            }
+
+        }
+        catch (Exception)
+        {
+            using (StreamWriter AbrirFicheiro = new StreamWriter("C:\\Rodrigo\\test.txt", true))
+            {
+                AbrirFicheiro.WriteLine("Nome: " + nome);
+                AbrirFicheiro.WriteLine("Idade: " + idade);
+                AbrirFicheiro.WriteLine("Móvel: " + tmovel);
+                AbrirFicheiro.WriteLine("____________________");
+
+            }
+            
+        }
+        
+    }
+}

@@ -1,0 +1,40 @@
+using System;
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        int num1 = 0;
+        int num = 0;
+
+
+        try
+        {
+            Console.WriteLine("Escolha o 1º numero: ");
+            num = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Escolha o 2º numero: ");
+            num1 = Convert.ToInt32(Console.ReadLine());
+
+            throw new Exception();
+        }
+        catch (Exception)
+        {
+            if (num == 0 || num1 == 0)
+            {
+                Console.WriteLine("Não pode dividir por 0");
+            }
+            else 
+            {
+                Console.WriteLine("Sucesso!");
+            }
+                 
+           
+            
+        }
+        
+        
+        
+        
+   
+    }
+}

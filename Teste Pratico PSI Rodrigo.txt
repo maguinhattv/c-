@@ -1,0 +1,63 @@
+using System;
+using System.IO;
+using System.Linq.Expressions;
+
+public class Program
+{
+    public class Global
+    {
+
+       public static string nome = "";
+       public static int qntpratos = 0;
+       public static string nomeprato = "";
+
+    }
+    public static void Main()
+    {
+        string nome = "";
+        int qntpratos = 0;
+        string nomeprato = "";
+        //----------------------------------------------------------
+        try
+        {
+            Console.WriteLine("Digite o seu nome: ");
+            Global.nome = Console.ReadLine();
+            Console.WriteLine("Que quantidade de pratos comeu?: ");
+            Global.qntpratos = Convert.ToInt32(Console.ReadLine());
+            for (int i = 0; i < Global.qntpratos; i++)
+            {
+                Console.WriteLine("Nome do prato (vegetariano, carne ou peixe): ");
+                Global.nomeprato = Console.ReadLine();
+                if (Global.nomeprato == "vegetariano" || Global.nomeprato == "Vegetariano")
+                {
+                    CriaTxt();
+                }
+                else
+                {
+                    throw new Exception();
+                }
+            }
+        
+
+        } catch (Exception)
+        {
+            Console.WriteLine("Obrigado e volte sempre!");
+        }
+    }
+    
+    private static void CriaTxt()
+    {
+
+        using (StreamWriter AbrirFicheiro = new StreamWriter("C:\\comida\\teste.txt", true)) 
+        {
+
+            AbrirFicheiro.WriteLine("Nome: " + Global.nome);
+            AbrirFicheiro.WriteLine("Quantidade de pratos: " + Global.qntpratos);
+            AbrirFicheiro.WriteLine("Nome do prato: " + Global.nomeprato);
+        }
+
+
+
+    }
+
+}

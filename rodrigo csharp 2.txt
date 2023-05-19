@@ -1,0 +1,21 @@
+using System; 
+public class Div_Of_Two_Num { 
+    public static void Main(string[] args) { 
+    int n1, n2, div; 
+    Console.WriteLine("Divisivel por 2?");
+    Console.WriteLine("Nº um: "); 
+	string num1 = Console.ReadLine();
+    int regI = Convert.ToInt32(num1);
+	if(regI%2==0){
+	Console.WriteLine("Olá");
+	for(int i = 0 ; i < regI; i++){
+	Console.WriteLine("Insira o nome do produto:");
+	string aluno = Console.ReadLine();
+	
+	}
+}else{
+	Console.WriteLine("Não é divisivel por 2!");
+}
+	
+}
+}

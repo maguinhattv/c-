@@ -1,0 +1,24 @@
+public function »»»»»»»  acede-se em qualquer lado do programa 
+private function»»»»»»»  somente na clase criada 
+local function»»»»»»»»»  somente no menbro criado
+
+
+exemplo: public (static) string nome feminino () 
+                »pertence a calsse e nao ao membro
+
+
+public class program ()
+public static string[]  pertence a classe e nao a outra funcao que possa existir 
+return;		
+				 
+				 
+				 
+py     |    c#
+
+input |   writeline(x)
+
+
+write |    readline()
+
+
+tipo de nome |		 

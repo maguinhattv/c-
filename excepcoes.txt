@@ -1,0 +1,61 @@
+using System;
+
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        string nom1 = "";
+        string nom2 = "";
+        //----------------------------------------------------------------
+        try
+        {
+            Console.WriteLine("Digite o seu nome completo: ");
+            string nom1 = Console.ReadLine();
+            nom1 = nom1.Replace(" ", "");
+            int len = nom1.Length;
+            Console.WriteLine("O tamanho do nome é: " + len);
+            //-------------------------------------------------------------
+            Console.WriteLine("Digite o seu nome completo: ");
+            string nom2 = Console.ReadLine();
+            nom2 = nom2.Replace(" ", "");
+            int len2 = nom2.Length;
+            //Console.WriteLine(nom2);
+            Console.WriteLine("O tamanho do nome é: " + len2);
+            //-------------------------------------------------------------
+            if (len > len2)
+            {
+                Console.WriteLine("O nome 1 tem mais caracteres!");
+            }
+            else
+            {
+                Console.WriteLine("O nome 2 tem mais caracteres!");
+            }
+            //-------------------------------------------------------------
+            
+            throw new Exception();
+        }
+        catch (Exception) 
+        {
+            //bool verifica = strin.All(Char.IsLetter);
+
+            if (//verifica == true || verifica2 == true)
+            {
+                Console.WriteLine("Sucesso!");
+            }
+            else
+            {
+                Console.WriteLine("Você escreveu numeros num nome!!!x");
+            }
+         
+            
+            
+
+            
+        {
+           
+        }
+        }
+            
+        
+    }
+}
